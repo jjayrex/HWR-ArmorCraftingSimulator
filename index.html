@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HWR - Armor Crafting Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Heads Will Roll: Reforged - Armor Crafting Simulator</h1>
+
+  <div class="controls">
+    <div>
+      <label>Left Item:</label>
+      <select id="leftItem"></select>
+      <img id="leftImage" class="item-icon" src="images/gambeson.png" alt="Gambeson">
+    </div>
+
+    <div>
+      <label>Right Item:</label>
+      <select id="rightItem"></select>
+      <img id="rightImage" class="item-icon" src="" alt="">
+    </div>
+
+    <div>
+      <label>Craftsmanship:</label>
+      <input type="number" id="craftsmanship" value="10" min="0" max="25">
+    </div>
+
+    <div>
+      <label><input type="checkbox" id="talent"> Armorsmith Talent</label>
+    </div>
+
+    <button onclick="craft()">Craft</button>
+  </div>
+
+  <div class="result" id="result"></div>
+
+  <script src="script.js"></script>
+  <footer class="credit">
+  © 2025 JJayRex
+  </footer>
+</body>
+</html>
