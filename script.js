@@ -76,7 +76,7 @@ const itemData = {
         torsoArmor: 7,
         torsoCover: 90,
         limbsArmor: 7,
-        limbsCover: 90,
+        limbsCover: 25,
         neckArmor: 0,
         neckCover: 0,
         prestige: 5,
@@ -381,27 +381,46 @@ const itemData = {
 
 // Crafting recipes
 const recipes = [
-    { left: ["Gambeson", "Leather Cuirass", "Reinforced Leather Armor"], right: ["Mail Armor", "Low Quality Mail", "Hauberk"], result: "Padded Chainmail", image: "combined_armor.png", trait: 1, attackChance: 1 },
-    { left: ["Gambeson", "Leather Armor", "Leather Cuirass", "Reinforced Leather Armor"], right: ["Iron Cuirass", "Demi-Cuirass", "Plackart with Leather Cuirass", "Plackart", "Fauld"], result: "Padded Cuirass", image: "mercenarys_armor.png", trait: 1, attackChance: 1 },
-    { left: ["Low Quality Mail", "Mail Armor", "Hauberk"], right: ["Iron Cuirass", "Demi-Cuirass", "Plackart with Leather Cuirass", "Plackart", "Fauld"], result: "Cuirass with Mail", image: "condottieri_armor.png", trait: 1, attackChance: 1 },
-    { left: ["Demi-Cuirass", "Fauld",], right: ["Plackart with Leather Cuirass", "Plackart"], result: "Full Cuirass", image: "mercenarys_armor.png" },
+// Torso: Padded Chainmail
+{ left: ["Gambeson", "Leather Cuirass", "Reinforced Leather Armor", "Leather Armor"], right: ["Mail Armor", "Low Quality Mail", "Hauberk"], result: "Padded Chainmail", image: "combined_armor.png", trait: 1, attackChance: 1 },
+// Torso: Padded Cuirass
+{ left: ["Gambeson", "Leather Armor", "Leather Cuirass", "Reinforced Leather Armor"], right: ["Iron Cuirass", "Demi-Cuirass", "Plackart with Leather Cuirass", "Plackart", "Fauld"], result: "Padded Cuirass", image: "mercenarys_armor.png", trait: 1, attackChance: 1 },
+// Torso: Cuirass with Mail
+{ left: ["Low Quality Mail", "Mail Armor", "Hauberk"], right: ["Iron Cuirass", "Demi-Cuirass", "Plackart with Leather Cuirass", "Plackart", "Fauld"], result: "Cuirass with Mail", image: "condottieri_armor.png", trait: 1, attackChance: 1 },
+// Torso: Full Cuirass
+{ left: ["Demi-Cuirass", "Fauld"], right: ["Plackart with Leather Cuirass", "Plackart"], result: "Full Cuirass", image: "mercenarys_armor.png", trait: 1, attackChance: 1 },
 
-    // Helmet recipes
-    { left: ["Light Helmet", "Iron Helmet", "Cervelliere Helmet", "Open Bascinet", "Italian Bascinet", "Sallet", "Barbute Helmet"], right: ["Aventail"], result: "Helmet with Aventail", image: "bascinet_aventail.png", trait: 2, attackChance: 2 },
-    { left: ["Kettle Hat", "Chapel de Fer"], right: ["Aventail"], result: "Helmet with Aventail", image: "chapel_de_fer_aventail.png", trait: 2, attackChance: 2 },
-    { left: ["Aventail"], right: ["Light Helmet", "Iron Helmet", "Cervelliere Helmet", "Open Bascinet", "Italian Bascinet", "Sallet", "Barbute Helmet"], result: "Helmet with Aventail", image: "bascinet_aventail.png", trait: 2, attackChance: 2 },
-    { left: ["Aventail"], right: ["Kettle Hat", "Chapel de Fer"], result: "Helmet with Aventail", image: "chapel_de_fer_aventail.png", trait: 2, attackChance: 2 },
-    { left: ["Sallet (Bevor and Visor)", "Bascinet with Visor"], right: ["Aventail"], result: "Helmet with Visor and Aventail", image: "bascinet_visor_aventail.png", trait: 2, attackChance: 2 },
-    { left: ["Aventail"], right: ["Sallet (Bevor and Visor)", "Bascinet with Visor"], result: "Helmet with Visor and Aventail", image: "bascinet_visor_aventail.png", trait: 2, attackChance: 2 },
 
-    { left: ["Visor"], right: ["Open Bascinet", "Italian Bascinet", "Sallet"], result: "Helmet with Visor", image: "bascinet_visor.png", trait: 3, attackChance: 3 },
-    { left: ["Open Bascinet", "Italian Bascinet", "Sallet"], right: ["Visor"], result: "Helmet with Visor", image: "bascinet_visor.png", trait: 2, attackChance: 4 },
-    { left: ["Face Protection"], right: ["Open Bascinet", "Italian Bascinet", "Sallet"], result: "Helmet with Face Protection", image: "sallet_bevor_visor.png", trait: 3, attackChance: 5 },
-    { left: ["Open Bascinet", "Italian Bascinet", "Sallet"], right: ["Face Protection"], result: "Helmet with Face Protection", image: "sallet_bevor_visor.png", trait: 2, attackChance: 5 },
-    { left: ["Face Protection"], right: ["Kettle Hat", "Chapel de Fer"], result: "Helmet with Face Protection", image: "chapel_de_fer_face_protection.png", trait: 3, attackChance: 5 },
-    { left: ["Kettle Hat", "Chapel de Fer"], right: ["Face Protection"], result: "Helmet with Face Protection", image: "chapel_de_fer_face_protection.png", trait: 2, attackChance: 5 },
-    { left: ["Chapel de Fer with Aventail"], right: ["Face Protection"], result: "Helmet with Face Protection", image: "chapel_de_fer_aventail_face_protection.png", trait: 2, attackChance: 5 },
-    { left: ["Face Protection"], right: ["Chapel de Fer with Aventail"], result: "Helmet with Face Protection", image: "chapel_de_fer_aventail_face_protection.png", trait: 3, attackChance: 5 }
+// Helmets + Aventail
+{ left: ["Light Helmet", "Iron Helmet", "Cervelliere Helmet", "Open Bascinet", "Italian Bascinet", "Sallet", "Barbute Helmet"], right: ["Aventail"], result: "Helmet with Aventail", image: "bascinet_aventail.png", trait: 2, attackChance: 2 },
+{ left: ["Kettle Hat", "Chapel de Fer"], right: ["Aventail"], result: "Helmet with Aventail", image: "chapel_de_fer_aventail.png", trait: 2, attackChance: 2 },
+{ left: ["Aventail"], right: ["Light Helmet", "Iron Helmet", "Cervelliere Helmet", "Open Bascinet", "Italian Bascinet", "Sallet", "Barbute Helmet"], result: "Helmet with Aventail", image: "bascinet_aventail.png", trait: 2, attackChance: 2 },
+{ left: ["Aventail"], right: ["Kettle Hat", "Chapel de Fer"], result: "Helmet with Aventail", image: "chapel_de_fer_aventail.png", trait: 2, attackChance: 2 },
+
+
+// Helmets + Visor & Aventail
+{ left: ["Sallet (Bevor and Visor)", "Bascinet with Visor"], right: ["Aventail"], result: "Helmet with Visor and Aventail", image: "bascinet_visor_aventail.png", trait: 2, attackChance: 2 },
+{ left: ["Aventail"], right: ["Sallet (Bevor and Visor)", "Bascinet with Visor"], result: "Helmet with Visor and Aventail", image: "bascinet_visor_aventail.png", trait: 2, attackChance: 2 },
+
+
+// Visor add-ons
+{ left: ["Visor"], right: ["Open Bascinet", "Italian Bascinet", "Sallet"], result: "Helmet with Visor", image: "bascinet_visor.png", trait: 3, attackChance: 3 },
+{ left: ["Open Bascinet", "Italian Bascinet", "Sallet"], right: ["Visor"], result: "Helmet with Visor", image: "bascinet_visor.png", trait: 3, attackChance: 3 },
+
+
+// Face protection
+{ left: ["Face Protection"], right: ["Open Bascinet", "Italian Bascinet", "Sallet", "Light Helmet"], result: "Helmet with Face Protection", image: "sallet_bevor_visor.png", trait: 3, attackChance: 5 },
+{ left: ["Open Bascinet", "Italian Bascinet", "Sallet", "Light Helmet"], right: ["Face Protection"], result: "Helmet with Face Protection", image: "sallet_bevor_visor.png", trait: 3, attackChance: 5 },
+
+
+// Face protection for kettle/chapel
+{ left: ["Face Protection"], right: ["Kettle Hat", "Chapel de Fer"], result: "Helmet with Face Protection", image: "chapel_de_fer_face_protection.png", trait: 3, attackChance: 5 },
+{ left: ["Kettle Hat", "Chapel de Fer"], right: ["Face Protection"], result: "Helmet with Face Protection", image: "chapel_de_fer_face_protection.png", trait: 3, attackChance: 5 },
+
+
+// Face protection on pre-aventail chapel
+{ left: ["Chapel de Fer with Aventail"], right: ["Face Protection"], result: "Helmet with Face Protection", image: "chapel_de_fer_aventail_face_protection.png", trait: 3, attackChance: 5 },
+{ left: ["Face Protection"], right: ["Chapel de Fer with Aventail"], result: "Helmet with Face Protection", image: "chapel_de_fer_aventail_face_protection.png", trait: 3, attackChance: 5 }
 ];
 
 // Populate selects
@@ -767,3 +786,4 @@ function craft() {
         res.innerHTML = `<h2>No valid recipe for ${left} + ${right}</h2>`;
     }
 }
+
